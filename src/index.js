@@ -15,7 +15,6 @@ ReactDOM.render(
     <GlobalStyle />
     {/* globally enable react tooltips */}
     <ReactTooltip />
-    {/* will be null if GA tracking is not enabled */}
   </React.StrictMode>,
   document.getElementById('root'),
 );
