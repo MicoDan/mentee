@@ -25,13 +25,13 @@ function Landing({ className }) {
             <div className="col-12 col-lg-6">
               <div className="row" style={{ marginBottom: '9px' }}>
                 <div>
-                  <h1 className="fw-bol">Meet Digital Person A.</h1>
+                  <h1 className="fw-bol font-sans">Meet Mary, your personal mental health assistant.</h1>
                 </div>
               </div>
               <div className="row">
                 <div>
-                  <h4 className="fw-light" style={{ marginBottom: '31px' }}>
-                    Briefly describe how your Digital Person can help users.
+                  <h4 className="fw-bold font-sans" style={{ marginBottom: '31px' }}>
+                    Mary is always here to be with you through your healing process.
                   </h4>
                 </div>
               </div>
@@ -52,7 +52,7 @@ function Landing({ className }) {
                         onChange={() => dispatch(setRequestedMediaPerms({ mic: !mic }))}
                         checked={mic}
                       />
-                      <div className="d-block ms-2">
+                      <div className="d-block ms-2 fw-bold font-sans">
                         Use your microphone so I can hear you.
                       </div>
                     </label>
@@ -76,7 +76,7 @@ function Landing({ className }) {
                         onChange={() => dispatch(setRequestedMediaPerms({ camera: !camera }))}
                         checked={camera}
                       />
-                      <div className="d-block ms-2">
+                      <div className="d-block ms-2 fw-bold font-sans">
                         Use your camera so we can chat face-to-face.
                       </div>
                     </label>
@@ -87,39 +87,14 @@ function Landing({ className }) {
                 <div>
                   <Link
                     to="/loading"
-                    className="shadow btn primary-accent fs-3"
+                    className="shadow btn primary-accent fs-3 fw-bold font-sans"
                     type="button"
                   >
-                    Chat with Digital Person A
+                    Chat with Mary
                   </Link>
                 </div>
               </div>
-              <div className="row">
-                <div>
-                  Link terms & conditions or company website here:
-                  {' '}
-                  <a href="https://example.com">www.example.com</a>
-                  .
-                </div>
-              </div>
               <div className="col" />
-            </div>
-          </div>
-          <div
-            className="d-none d-lg-block"
-            style={{
-              width: '250px',
-              position: 'fixed',
-              right: '20px',
-            }}
-          >
-            <div className="d-flex align-items-center justify-content-center fs-4">
-              <CameraVideoFill size={26} />
-              <span className="ps-1">+</span>
-              <MicFill size={26} />
-            </div>
-            <div className="text-center fst-italic">
-              Enable your camera and mic to optimize our interaction.
             </div>
           </div>
         </div>
@@ -133,19 +108,21 @@ Landing.propTypes = {
 };
 
 export default styled(Landing)`
-  .landing-wrapper {
-    min-height: 100vh;
+.landing-wrapper {
+  min-height: 100vh;
 
-    background: ${landingBackgroundImage ? `url(${landingBackgroundImage})` : ''} ${landingBackgroundColor ? `${landingBackgroundColor};` : ''};
-    background-size: auto 60%;
-    background-repeat: no-repeat;
-    background-position: bottom center;
+  background: ${landingBackgroundImage ? `url(${landingBackgroundImage})` : ''} ${landingBackgroundColor ? `${landingBackgroundColor};` : ''};
+  background-size: auto 40%; 
+  background-repeat: no-repeat;
+  background-position: calc(50% - 20px) bottom; 
 
-    @media (min-width: ${breakpoints.lg}px) {
-      background-size: 60% auto;
-      background-position: right bottom;
-    }
+  @media (min-width: ${breakpoints.lg}px) {
+    background-size: 40% auto; 
+    background-position: calc(50% + 400px) bottom; 
   }
+}
+
+
   .landing-container {
     padding-top: 1rem;
     display: flex;
@@ -183,13 +160,13 @@ export default styled(Landing)`
     &.status-unchecked {
       &::after {
         content: 'OFF';
-        color: #000;
+        color: #27c22f;
         margin-right: 18%;
       }
       &::before {
         background-size: 60%;
         background-repeat: no-repeat;
-        background-color: rgb(220, 220, 220);
+        background-color:  #27c22f;
         background-position: 45% center;
         content: '';
         display: block;

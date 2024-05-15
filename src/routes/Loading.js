@@ -62,7 +62,7 @@ function Loading({
           <button className="btn-unstyled" type="button" style={{ opacity: 0, width: '44px' }}>
             {' '}
           </button>
-          <h4>
+          <h4 className='fw-bold font-sans'>
             Before you begin.
           </h4>
           <button className="btn-unstyled" type="button" onClick={() => setPage(page + 1)}>
@@ -75,23 +75,23 @@ function Loading({
             requestedMediaPerms.mic === true && requestedMediaPerms.micDenied === false
               ? (
                 <div>
-                  <p>
-                    The Digital Person works best in a quiet environment, when you&apos;re close to
+                  <p className='fw-bold font-sans'>
+                    Mary works best in a quiet environment, when you&apos;re close to
                     your microphone, and your camera is on.
                   </p>
-                  <p>
+                  <p className='fw-bold font-sans'>
                     Speak clearly, and in short responses.
                   </p>
                 </div>
               )
               : (
                 <div>
-                  <p>
-                    The Digital Person works best with your microphone on. Enable your microphone
+                  <p className='fw-bold font-sans'>
+                    Mary works best with your microphone on. Enable your microphone
                     at any point during the experience by clicking the microphone icon & allowing
                     the permissions.
                   </p>
-                  <p>
+                  <p className='fw-bold font-sans'>
                     Remember to speak clearly, and in short responses.
                   </p>
                 </div>
@@ -103,8 +103,8 @@ function Loading({
     <div>
       <div className="row justify-content-center">
         <div className="tutorial-icon mb-2">
-          <div className="fs-4 fw-bold mt-2">
-            &ldquo;hi, how are you?&rdquo;
+          <div className="fs-4 fw-bold mt-2 font-sans">
+            &ldquo;Hi, how are you?&rdquo;
           </div>
         </div>
       </div>
@@ -113,15 +113,15 @@ function Loading({
           <button className="btn-unstyled" type="button" onClick={() => setPage(page - 1)}>
             <ArrowLeftCircleFill size={32} />
           </button>
-          <h4>
+          <h4 className='fw-bold font-sans'>
             What you do.
           </h4>
           <button className="btn-unstyled" type="button" onClick={() => setPage(page + 1)}>
             <ArrowRightCircleFill size={32} />
           </button>
         </div>
-        <div className="mt-0 mb-2">
-          Cory will listen to whatever you say.
+        <div className="mt-0 mb-2 fw-bold font-sans">
+          Mary will listen to whatever you say.
           Other options, like typing or choosing your responses, are also available.
         </div>
       </div>
@@ -135,14 +135,14 @@ function Loading({
           <button className="btn-unstyled" type="button" onClick={() => setPage(page - 1)}>
             <ArrowLeftCircleFill size={32} />
           </button>
-          <h4>
+          <h4 className='fw-bold font-sans'>
             What you can talk about.
           </h4>
           <button className="btn-unstyled" type="button" style={{ opacity: 0, width: '44px' }}>
             {' '}
           </button>
         </div>
-        <div className="mt-0 mb-2">
+        <div className="mt-0 mb-2 fw-bold font-sans">
           You can explore the features of my UI, see examples of the different
           supporting content I can show, or hear about the latest updates to
           the UI template that I&apos;m using.
@@ -175,10 +175,10 @@ function Loading({
                   page < pages.length - 1
                     ? (
                       <button
-                        className="btn primary-accent m-2"
+                        className="btn primary-accent m-2 fw-bold font-sans"
                         type="button"
                         onClick={() => setPage(page + 1)}
-                        style={{ backgroundColor: '#3C3C3C', border: '2px solid #3C3C3C' }}
+                        style={{ backgroundColor: '#6E956C'}}
                       >
                         Next
                       </button>
@@ -190,7 +190,7 @@ function Loading({
             <div className="row">
               <div>
                 <button
-                  className={`${connected || page >= pages.length - 1 ? 'btn btn-dark connected-button' : 'btn-unstyled unconnected-button'} m-2`}
+                  className={`${connected || page >= pages.length - 1 ? 'btn btn-dark  connected-button' : 'btn-unstyled unconnected-button'} m-2`}
                   type="button"
                   disabled={skip}
                   onClick={redirectToVideoOnConnect}
@@ -199,7 +199,7 @@ function Loading({
                   { !connected && skip
                     ? (
                       <div className="ms-1 spinner-border spinner-border-sm text-secondary" role="status">
-                        <span className="visually-hidden">Loading...</span>
+                        <span className="visually-hidden fw-bold font-sans">Loading...</span>
                       </div>
                     )
                     : null }

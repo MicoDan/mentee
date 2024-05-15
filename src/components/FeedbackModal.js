@@ -170,10 +170,14 @@ FeedbackModal.propTypes = {
   className: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   closeText: PropTypes.string,
+  denyFeedbackText: PropTypes.string,
+  denyFeedback: PropTypes.func,
 };
 
 FeedbackModal.defaultProps = {
   closeText: 'Close',
+  denyFeedbackText: 'No Thanks',
+  denyFeedback: null,
 };
 
 export default styled(FeedbackModal)`

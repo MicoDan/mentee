@@ -55,16 +55,12 @@ export default styled(Header)`
   }
   .logo {
     margin-top: 20px;
-
-    /* height constrain logo image */
-    // height: calc(0.4 * ${headerHeight});
-    // width: auto;
-    height: auto;
-    max-width: 30vw;
+    height: 50px;
+    max-width: 50vw;
 
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) {
-      height: calc(0.8 * ${headerHeight});
+      height: calc(1.8 * ${headerHeight});
    }
   }
 `;

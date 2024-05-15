@@ -6,7 +6,7 @@ import roundObject from '../../utils/roundObject';
 import { meatballString } from './meatball';
 
 const AUTH_MODE = parseInt(process.env.REACT_APP_PERSONA_AUTH_MODE, 10) || 0;
-const API_KEY = process.env.REACT_APP_API_KEY || '';
+const API_KEY = process.env.REACT_APP_API_KEY;
 const TOKEN_ISSUER = process.env.REACT_APP_TOKEN_URL;
 const PERSONA_ID = '1';
 // CAMERA_ID commented out because CUE manages camera
@@ -14,7 +14,7 @@ const PERSONA_ID = '1';
 
 let startupErr = null;
 
-if (AUTH_MODE === 0 && API_KEY === '') startupErr = { msg: 'REACT_APP_API_KEY not defined!' };
+if (AUTH_MODE === 0 && !API_KEY) startupErr = { msg: 'REACT_APP_API_KEY not defined!' };
 
 const initialState = {
   requestedMediaPerms: sessionStorage.getItem('requestedMediaPerms')
