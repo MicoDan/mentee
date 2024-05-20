@@ -13,7 +13,6 @@ ReactDOM.render(
       <Router />
     </Provider>
     <GlobalStyle />
-    {/* globally enable react tooltips */}
     <ReactTooltip />
   </React.StrictMode>,
   document.getElementById('root'),
